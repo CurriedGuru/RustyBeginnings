@@ -56,6 +56,7 @@ fn fibonacci(n: u32) -> u128 {
         }
     };
 }
+
 fn read_string_from_stdin() -> io::Result<String> {
     let mut value = String::new();
     return match io::stdin().read_line(&mut value) {
