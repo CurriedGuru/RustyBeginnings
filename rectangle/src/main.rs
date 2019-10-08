@@ -5,8 +5,19 @@ struct Rectangle {
 }
 
 impl Rectangle {
+    // Method
     fn area(&self) -> u32 {
         self.width * self.height
+    }
+
+    // Method
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+
+    // Associated function: does not take &self
+    fn square(side: u32) -> Rectangle {
+        Rectangle { width: side, height: side }
     }
 }
 
@@ -46,4 +57,11 @@ fn main() {
 
     // Pretty printing
     println!("{:#?}", rect6);
+
+    println!("Can {:?} hold {:?}? {}", rect4, rect5, rect4.can_hold(&rect5));
+    println!("Can {:?} hold {:?}? {}", rect3, rect4, rect3.can_hold(&rect4));
+
+    // Use associated function
+    let rect7 = Rectangle::square(19);
+    println!("Area of {:?} is {}", rect7, rect7.area());
 }
