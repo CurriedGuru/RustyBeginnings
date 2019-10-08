@@ -26,7 +26,7 @@ fn main() {
 
 fn suffix(n: u32) -> String {
     if n == 11 || n == 12 || n == 13 {
-        return "th".to_string();
+        "th".to_string();
     }
 
     return match n % 10 {
