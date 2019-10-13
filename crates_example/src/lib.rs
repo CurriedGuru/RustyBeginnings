@@ -1,5 +1,7 @@
 pub mod geometry {
 
+    pub use rand::Rng;
+
     fn init_canvas() {
         println!("Initializing canvas");
     }
