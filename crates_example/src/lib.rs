@@ -34,13 +34,15 @@ pub mod geometry {
             radius: f64
         }
 
+        const PI: f64 = 3.14;
+
         impl Circle {
             pub fn area(&self) -> f64 {
-                return 3.14 * self.radius * self.radius;
+                return PI * self.radius * self.radius;
             }
 
             pub fn perimeter(&self) -> f64 {
-                return 2.0 * 3.14 * self.radius;
+                return 2.0 * PI * self.radius;
             }
 
             pub fn new(radius: f64) -> Circle {
