@@ -1,4 +1,4 @@
-use crates_example::shapes::Square;
+use crates_example::geometry::shapes::Square;
 
 fn main() {
     let c = Square::new(2);

@@ -1,4 +1,4 @@
-use crates_example::shapes::Circle;
+use crates_example::geometry::shapes::Circle;
 
 fn main() {
     let c = Circle::new(2.0);
